@@ -1,5 +1,5 @@
 /* =========================================================
-   室内一角 · gallery interactions
+   六件物件 · gallery interactions
    ========================================================= */
 
 (function () {
@@ -7,71 +7,71 @@
 
   /* ------------------------------ data ------------------------------ */
   const MODELS = {
-    all: {
-      eyebrow: "COMPOSITE SCENE — 00",
-      title: "室内一角",
-      en: "All Scenes / Interior Study",
-      img: "preview/all.png",
-      sil: "preview/sil_all.png",
-      desc:
-        "三个独立场景在同一个镜头里重新排布：衣柜靠左、显示器居中、窗帘靠右。共用地面、三点灯光与一台目标摄像机，用来检查比例、朝向与遮挡关系是否成立。",
-      specs: [
-        ["画幅", "800 × 600 px"],
-        ["模型", "3 件"],
-        ["建模部件", "27 个"],
-        ["场景对象", "45 个"],
-        ["渲染器", "Default Scanline"]
-      ],
-      parts: ["双门衣柜", "桌面显示器", "窗与窗帘", "地面", "三点灯光", "目标摄像机"],
-      file: "models/all.max"
-    },
-    wardrobe: {
-      eyebrow: "MODEL 01 — WARDROBE",
-      title: "双门衣柜",
-      en: "Wardrobe",
-      img: "preview/wardrobe.png",
+    cabinet: {
+      eyebrow: "MODEL 01 — CABINET",
+      title: "柜子",
+      en: "Cabinet / Wardrobe",
+      img: "preview/wardrobe.jpg",
       sil: "preview/sil_wardrobe.png",
       desc:
-        "以 120 × 60 × 192 cm 的柜体为基准，先用三个体块确定比例，再补上 1 cm 中缝、圆柱把手与门板压线。五种木色材质拉开层次，避免大面单调。",
+        "以 120 × 60 × 192 的柜体为基准，先用三个体块确定比例，再补上 1 厘米中缝、圆柱把手与门板压线。五种木色材质拉开层次，避免大面单调。",
       specs: [
-        ["外包尺寸", "120 × 60 × 192 cm"],
+        ["外包尺寸", "120 × 60 × 192"],
         ["建模部件", "10 个"],
         ["材质", "5 种"],
         ["场景对象", "16 个"],
-        ["源文件", "wardrobe.max"]
+        ["源文件", "cabinet.max"]
       ],
-      parts: ["柜体", "顶板", "踢脚", "左门", "右门", "1 cm 中缝", "圆柱把手 ×2", "门板线条 ×2"],
-      file: "models/wardrobe.max"
+      parts: ["柜体", "顶板", "踢脚", "左门", "右门", "1 厘米中缝", "圆柱把手 ×2", "门板线条 ×2"],
+      file: "models/cabinet.max"
+    },
+    sofa: {
+      eyebrow: "MODEL 02 — SOFA",
+      title: "沙发",
+      en: "Sofa",
+      img: "preview/sofa.jpg",
+      sil: "preview/sil_sofa.png",
+      desc:
+        "由 12 个倒角体块拼成：底座、三块坐垫、靠背、两只扶手、靠背垫与抱枕。源文件没有材质，预览按暖灰织物、深色扶手与锈红 / 橄榄抱枕重新分配。",
+      specs: [
+        ["外形尺寸", "343.6 × 58.5 × 70"],
+        ["建模部件", "12 个"],
+        ["材质", "6 种"],
+        ["场景对象", "12 个"],
+        ["源文件", "sofa.max"]
+      ],
+      parts: ["底座", "坐垫 ×3", "靠背", "扶手 ×2", "靠背垫 ×2", "抱枕 ×3"],
+      file: "models/sofa.max"
     },
     monitor: {
-      eyebrow: "MODEL 02 — MONITOR",
-      title: "桌面显示器",
+      eyebrow: "MODEL 03 — MONITOR",
+      title: "显示器",
       en: "Monitor",
-      img: "preview/monitor.png",
+      img: "preview/monitor.jpg",
       sil: "preview/sil_monitor.png",
       desc:
-        "从 26 cm 的圆形底盘开始，颈柱、边框、屏幕与背板逐层叠合。屏幕与背板转为 Editable Mesh，深灰塑料搭配低饱和蓝屏，保持桌面设备的冷静感。",
+        "从 26 的圆形底盘开始，颈柱、边框、屏幕与背板逐层叠合。屏幕与背板转为 Editable Mesh，深灰塑料搭配低饱和蓝屏，保持桌面设备的冷静感。",
       specs: [
-        ["外包尺寸", "62 × 26 × 63 cm"],
+        ["外形尺寸", "62 × 26 × 63"],
         ["建模部件", "5 个"],
         ["材质", "4 种"],
         ["场景对象", "11 个"],
         ["源文件", "monitor.max"]
       ],
-      parts: ["圆形底盘", "颈柱", "屏幕边框", "屏幕面板 ×1", "背板"],
+      parts: ["圆形底盘", "颈柱", "屏幕边框", "屏幕面板", "背板"],
       file: "models/monitor.max"
     },
     curtain: {
-      eyebrow: "MODEL 03 — CURTAIN",
-      title: "窗与窗帘",
+      eyebrow: "MODEL 04 — CURTAIN",
+      title: "窗帘",
       en: "Curtain",
-      img: "preview/curtain.png",
+      img: "preview/curtain.jpg",
       sil: "preview/sil_curtain.png",
       desc:
-        "380 × 300 cm 的墙面上开出 164 × 160 cm 的窗，窗框、竖梃与玻璃依次嵌入。帘布以正弦波做 4.2 cm 的褶皱，左右各 96 cm 宽，最后加上木质帘杆与球形端头。",
+        "380 × 300 的墙面上开出 164 × 160 的窗，窗框、竖梃与玻璃依次嵌入。帘布以正弦波做 4.2 厘米的褶皱，左右各 96 宽，最后加上木质帘杆与球形端头。",
       specs: [
-        ["墙面尺寸", "380 × 300 cm"],
-        ["窗洞尺寸", "164 × 160 cm"],
+        ["墙面尺寸", "380 × 300"],
+        ["窗洞尺寸", "164 × 160"],
         ["建模部件", "12 个"],
         ["材质", "6 种"],
         ["场景对象", "18 个"],
@@ -79,10 +79,48 @@
       ],
       parts: ["墙面", "窗框 ×4", "竖梃", "玻璃", "帘杆", "球形端头 ×2", "帘布 ×2"],
       file: "models/curtain.max"
+    },
+    keyboard: {
+      eyebrow: "MODEL 05 — KEYBOARD",
+      title: "键盘",
+      en: "Keyboard",
+      img: "preview/keyboard.jpg",
+      sil: "preview/sil_keyboard.png",
+      desc:
+        "主体是一块 1,270 顶点的可编辑多边形，键帽、底座与键缝都在同一个网格里。原文件带一块参考平面，预览时隐藏，只保留键盘本体并赋予深石墨色材质。",
+      specs: [
+        ["外形尺寸", "310 × 76 × 12.6"],
+        ["建模部件", "1 个"],
+        ["顶点数", "1,270"],
+        ["材质", "1 种"],
+        ["场景对象", "2 个（含参考平面）"],
+        ["源文件", "keyboard.max"]
+      ],
+      parts: ["键盘主体 ×1", "键帽阵列（同网格）", "底部壳体（同网格）", "参考平面（预览隐藏）"],
+      file: "models/keyboard.max"
+    },
+    mouse: {
+      eyebrow: "MODEL 06 — MOUSE",
+      title: "鼠标",
+      en: "Mouse",
+      img: "preview/mouse.jpg",
+      sil: "preview/sil_mouse.png",
+      desc:
+        "单件 419 顶点的可编辑网格，外形 45 × 59.5 × 20。用浅灰塑料与较高高光表现握壳的弧面，底部保持深色，强调轮廓与握感。",
+      specs: [
+        ["外形尺寸", "45 × 59.5 × 20"],
+        ["建模部件", "1 个"],
+        ["顶点数", "419"],
+        ["材质", "1 种"],
+        ["场景对象", "1 个"],
+        ["源文件", "mouse.max"]
+      ],
+      parts: ["鼠标外壳 ×1", "左右键（同网格）", "滚轮（同网格）"],
+      file: "models/mouse.max"
     }
   };
 
-  const ORDER = ["all", "wardrobe", "monitor", "curtain"];
+  const ORDER = ["cabinet", "sofa", "monitor", "curtain", "keyboard", "mouse"];
 
   /* ------------------------------ refs ------------------------------ */
   const modal = document.getElementById("modal");
@@ -108,7 +146,7 @@
 
   /* ------------------------------ github link ------------------------------ */
   (function resolveGithub() {
-    let url = "https://github.com/";
+    let url = "https://github.com/lemonteaQWQ/-";
     if (location.hostname.endsWith(".github.io")) {
       const user = location.hostname.split(".")[0];
       const repo = location.pathname.split("/").filter(Boolean)[0] || "";
@@ -210,6 +248,7 @@
       openModal(card.dataset.model, card);
     });
     card.addEventListener("keydown", function (event) {
+      if (card.tagName === "BUTTON") return;
       if (event.key === "Enter" || event.key === " ") {
         event.preventDefault();
         openModal(card.dataset.model, card);

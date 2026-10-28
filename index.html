@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0e0c0a">
-  <title>室内一角 · 3ds Max 建模作品集 | 余家杰</title>
-  <meta name="description" content="三件日常物件的 3ds Max 建模记录：双门衣柜、桌面显示器与窗帘。从参数化体块、材质布光到渲染校验，完整呈现制作过程。">
+  <title>六件物件 · 3ds Max 建模档案 | 余家杰</title>
+  <meta name="description" content="六件日常物件的 3ds Max 建模档案：柜子、沙发、显示器、窗帘、键盘与鼠标。渲染图、剪影、尺寸、部件清单与制作过程。">
   <meta name="author" content="余家杰">
-  <meta property="og:title" content="室内一角 · 3ds Max 建模作品集">
-  <meta property="og:description" content="从参数到画面：衣柜、显示器、窗帘的建模与渲染过程。">
+  <meta property="og:title" content="六件物件 · 3ds Max 建模档案">
+  <meta property="og:description" content="从体块到画面：六件日常物件的建模、材质与渲染记录。">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="preview/all.png">
+  <meta property="og:image" content="preview/all.jpg">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230e0c0a'/%3E%3Cpath d='M16 20h32M32 20v26' stroke='%23d8b26a' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css">
   <script>document.documentElement.classList.add('js');</script>
@@ -25,9 +25,9 @@
       <span class="brand-text">余家杰<small>3ds Max Portfolio</small></span>
     </a>
     <nav class="nav-links" aria-label="主导航">
-      <a href="#works">作品</a>
+      <a href="#works">模型</a>
       <a href="#process">过程</a>
-      <a href="#scene">组合场景</a>
+      <a href="#scene">组合校验</a>
     </nav>
     <a class="nav-cta" id="githubLink" href="https://github.com/" target="_blank" rel="noopener">
       GitHub <span aria-hidden="true">↗</span>
@@ -40,46 +40,66 @@
       <div class="hero-glow" aria-hidden="true"></div>
       <div class="wrap hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">3DS MAX · INTERIOR STUDY · 2026</p>
+          <p class="eyebrow">3DS MAX · SIX OBJECTS · 2026</p>
           <h1 class="hero-title">
-            <span>把空间，</span>
+            <span>把日常，</span>
             <span class="accent">拆成参数。</span>
           </h1>
           <p class="hero-lede">
-            三件日常物件的建模记录——衣柜、显示器与窗帘。
-            从厘米级尺度、基础体块到材质与三点布光，
-            一步一步搭出室内的一角。
+            六件日常物件的建模档案——柜子、沙发、显示器、窗帘、键盘与鼠标。
+            从体块、材质到三点布光，记录一件物件如何被搭起来。
           </p>
           <div class="hero-actions">
-            <a class="btn btn--solid" href="#works">浏览作品 <span aria-hidden="true">↓</span></a>
+            <a class="btn btn--solid" href="#works">浏览六件模型 <span aria-hidden="true">↓</span></a>
             <a class="btn btn--ghost" href="#process">看制作过程</a>
           </div>
           <ul class="hero-tags" aria-label="使用技术">
             <li>Parametric Modeling</li>
+            <li>Editable Poly</li>
             <li>Standard Material</li>
             <li>3-Point Lighting</li>
-            <li>Scanline Render</li>
           </ul>
         </div>
 
-        <figure class="hero-figure reveal">
-          <div class="hero-frame">
-            <img src="preview/all.png" alt="衣柜、显示器与窗帘的组合场景渲染图" width="800" height="600">
+        <figure class="hero-collection reveal">
+          <div class="collection-grid">
+            <button class="collection-tile" type="button" data-model="cabinet" aria-label="查看柜子模型">
+              <img src="preview/wardrobe.jpg" alt="柜子模型渲染图" width="800" height="600">
+              <span class="tile-label"><b>01</b> 柜子</span>
+            </button>
+            <button class="collection-tile" type="button" data-model="sofa" aria-label="查看沙发模型">
+              <img src="preview/sofa.jpg" alt="沙发模型渲染图" width="800" height="600">
+              <span class="tile-label"><b>02</b> 沙发</span>
+            </button>
+            <button class="collection-tile" type="button" data-model="monitor" aria-label="查看显示器模型">
+              <img src="preview/monitor.jpg" alt="显示器模型渲染图" width="800" height="600">
+              <span class="tile-label"><b>03</b> 显示器</span>
+            </button>
+            <button class="collection-tile" type="button" data-model="curtain" aria-label="查看窗帘模型">
+              <img src="preview/curtain.jpg" alt="窗帘模型渲染图" width="800" height="600">
+              <span class="tile-label"><b>04</b> 窗帘</span>
+            </button>
+            <button class="collection-tile" type="button" data-model="keyboard" aria-label="查看键盘模型">
+              <img src="preview/keyboard.jpg" alt="键盘模型渲染图" width="800" height="600">
+              <span class="tile-label"><b>05</b> 键盘</span>
+            </button>
+            <button class="collection-tile" type="button" data-model="mouse" aria-label="查看鼠标模型">
+              <img src="preview/mouse.jpg" alt="鼠标模型渲染图" width="800" height="600">
+              <span class="tile-label"><b>06</b> 鼠标</span>
+            </button>
           </div>
-          <figcaption class="figure-chip">
-            <span class="chip-dot" aria-hidden="true"></span>
-            <span><strong>SCENE 04</strong> / all.max</span>
-            <span class="chip-size">800 × 600</span>
+          <figcaption class="collection-meta">
+            <span><b>06</b> MODELS / 6 MAX FILES</span>
+            <span>800 × 600 RENDER</span>
           </figcaption>
-          <span class="hero-note" aria-hidden="true">渲染 / Render</span>
         </figure>
       </div>
 
       <div class="wrap">
         <dl class="stats">
-          <div><dt>独立模型</dt><dd>03<small>件</small></dd></div>
-          <div><dt>建模部件</dt><dd>27<small>个</small></dd></div>
-          <div><dt>场景对象</dt><dd>45<small>个</small></dd></div>
+          <div><dt>模型</dt><dd>06<small>件</small></dd></div>
+          <div><dt>建模部件</dt><dd>41<small>个</small></dd></div>
+          <div><dt>场景对象</dt><dd>60<small>个</small></dd></div>
           <div><dt>渲染尺寸</dt><dd>800<small>× 600</small></dd></div>
         </dl>
       </div>
@@ -87,8 +107,8 @@
 
     <div class="marquee" aria-hidden="true">
       <div class="marquee-track">
-        <span>WARDROBE</span><i>◆</i><span>MONITOR</span><i>◆</i><span>CURTAIN</span><i>◆</i><span>3DS MAX</span><i>◆</i><span>PARAMETRIC MODELING</span><i>◆</i><span>INTERIOR STUDY</span><i>◆</i>
-        <span>WARDROBE</span><i>◆</i><span>MONITOR</span><i>◆</i><span>CURTAIN</span><i>◆</i><span>3DS MAX</span><i>◆</i><span>PARAMETRIC MODELING</span><i>◆</i><span>INTERIOR STUDY</span><i>◆</i>
+        <span>CABINET</span><i>◆</i><span>SOFA</span><i>◆</i><span>MONITOR</span><i>◆</i><span>CURTAIN</span><i>◆</i><span>KEYBOARD</span><i>◆</i><span>MOUSE</span><i>◆</i><span>3DS MAX</span><i>◆</i>
+        <span>CABINET</span><i>◆</i><span>SOFA</span><i>◆</i><span>MONITOR</span><i>◆</i><span>CURTAIN</span><i>◆</i><span>KEYBOARD</span><i>◆</i><span>MOUSE</span><i>◆</i><span>3DS MAX</span><i>◆</i>
       </div>
     </div>
 
@@ -96,100 +116,127 @@
     <section class="section works" id="works">
       <div class="wrap">
         <div class="section-head reveal">
-          <p class="eyebrow">01 — SELECTED WORKS</p>
+          <p class="eyebrow">01 — SELECTED MODELS</p>
           <div class="section-head-row">
-            <h2>三个物件，<br><em>一处空间。</em></h2>
+            <h2>六件物件，<br><em>各自成景。</em></h2>
             <p class="lede">
-              全部由 3ds Max 基础几何体与可编辑网格搭建。
-              每件模型保留独立场景与剪影通道，
-              点击卡片查看细节、部件构成与源文件。
+              六个 <code>.max</code> 源文件，来自同一组课程练习：柜子、沙发、显示器、窗帘、键盘与鼠标。
+              点击卡片查看渲染、剪影、尺寸与部件构成。尺寸沿用各源文件的建模单位。
             </p>
           </div>
         </div>
 
         <div class="works-grid">
-          <!-- FEATURE -->
-          <article class="card card--feature reveal" data-model="all" tabindex="0" role="button" aria-label="查看组合场景：室内一角">
+          <article class="card reveal" data-model="cabinet" tabindex="0" role="button" aria-label="查看柜子模型">
             <div class="card-media">
-              <img src="preview/all.png" alt="室内一角的组合场景渲染" loading="lazy" width="800" height="600">
-              <span class="card-index">00</span>
-              <span class="card-view">查看大图 <span aria-hidden="true">↗</span></span>
-            </div>
-            <div class="card-body card-body--feature">
-              <div>
-                <p class="card-kicker">COMPOSITE SCENE</p>
-                <h3>室内一角</h3>
-                <p class="card-en">All Scenes / Interior Study</p>
-                <p class="card-desc">衣柜靠左、显示器居中、窗帘靠右。三个独立场景在同一个镜头里重新排布，共用地面、三点灯光与一台目标摄像机。</p>
-              </div>
-              <div class="feature-foot">
-                <dl class="card-specs">
-                  <div><dt>模型</dt><dd>3 件</dd></div>
-                  <div><dt>部件</dt><dd>27 个</dd></div>
-                  <div><dt>对象</dt><dd>45 个</dd></div>
-                </dl>
-                <span class="feature-arrow" aria-hidden="true">→</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- WARDROBE -->
-          <article class="card reveal" data-model="wardrobe" tabindex="0" role="button" aria-label="查看双门衣柜模型">
-            <div class="card-media">
-              <img src="preview/wardrobe.png" alt="双门衣柜模型渲染图" loading="lazy" width="800" height="600">
+              <img src="preview/wardrobe.jpg" alt="双门柜子模型渲染图" loading="lazy" width="800" height="600">
               <span class="card-index">01</span>
               <span class="card-view">查看模型 <span aria-hidden="true">↗</span></span>
             </div>
             <div class="card-body">
               <div>
-                <h3>双门衣柜</h3>
-                <p class="card-en">Wardrobe</p>
+                <h3>柜子</h3>
+                <p class="card-en">Cabinet</p>
               </div>
               <dl class="card-specs">
-                <div><dt>尺寸</dt><dd>120 × 60 × 192 cm</dd></div>
+                <div><dt>尺寸</dt><dd>120 × 60 × 192</dd></div>
                 <div><dt>部件</dt><dd>10</dd></div>
               </dl>
             </div>
           </article>
 
-          <!-- MONITOR -->
-          <article class="card reveal" data-model="monitor" tabindex="0" role="button" aria-label="查看桌面显示器模型">
+          <article class="card reveal" data-model="sofa" tabindex="0" role="button" aria-label="查看沙发模型">
             <div class="card-media">
-              <img src="preview/monitor.png" alt="桌面显示器模型渲染图" loading="lazy" width="800" height="600">
+              <img src="preview/sofa.jpg" alt="沙发模型渲染图" loading="lazy" width="800" height="600">
               <span class="card-index">02</span>
               <span class="card-view">查看模型 <span aria-hidden="true">↗</span></span>
             </div>
             <div class="card-body">
               <div>
-                <h3>桌面显示器</h3>
-                <p class="card-en">Monitor</p>
+                <h3>沙发</h3>
+                <p class="card-en">Sofa</p>
               </div>
               <dl class="card-specs">
-                <div><dt>尺寸</dt><dd>62 × 26 × 63 cm</dd></div>
-                <div><dt>部件</dt><dd>5</dd></div>
+                <div><dt>尺寸</dt><dd>343.6 × 58.5 × 70</dd></div>
+                <div><dt>部件</dt><dd>12</dd></div>
               </dl>
             </div>
           </article>
 
-          <!-- CURTAIN -->
-          <article class="card reveal" data-model="curtain" tabindex="0" role="button" aria-label="查看窗帘与窗景模型">
+          <article class="card reveal" data-model="monitor" tabindex="0" role="button" aria-label="查看显示器模型">
             <div class="card-media">
-              <img src="preview/curtain.png" alt="窗帘与窗景模型渲染图" loading="lazy" width="800" height="600">
+              <img src="preview/monitor.jpg" alt="桌面显示器模型渲染图" loading="lazy" width="800" height="600">
               <span class="card-index">03</span>
               <span class="card-view">查看模型 <span aria-hidden="true">↗</span></span>
             </div>
             <div class="card-body">
               <div>
-                <h3>窗与窗帘</h3>
+                <h3>显示器</h3>
+                <p class="card-en">Monitor</p>
+              </div>
+              <dl class="card-specs">
+                <div><dt>尺寸</dt><dd>62 × 26 × 63</dd></div>
+                <div><dt>部件</dt><dd>5</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="card reveal" data-model="curtain" tabindex="0" role="button" aria-label="查看窗帘模型">
+            <div class="card-media">
+              <img src="preview/curtain.jpg" alt="窗帘与窗景模型渲染图" loading="lazy" width="800" height="600">
+              <span class="card-index">04</span>
+              <span class="card-view">查看模型 <span aria-hidden="true">↗</span></span>
+            </div>
+            <div class="card-body">
+              <div>
+                <h3>窗帘</h3>
                 <p class="card-en">Curtain</p>
               </div>
               <dl class="card-specs">
-                <div><dt>墙面</dt><dd>380 × 300 cm</dd></div>
+                <div><dt>墙面</dt><dd>380 × 300</dd></div>
                 <div><dt>部件</dt><dd>12</dd></div>
               </dl>
             </div>
           </article>
+
+          <article class="card reveal" data-model="keyboard" tabindex="0" role="button" aria-label="查看键盘模型">
+            <div class="card-media">
+              <img src="preview/keyboard.jpg" alt="键盘模型渲染图" loading="lazy" width="800" height="600">
+              <span class="card-index">05</span>
+              <span class="card-view">查看模型 <span aria-hidden="true">↗</span></span>
+            </div>
+            <div class="card-body">
+              <div>
+                <h3>键盘</h3>
+                <p class="card-en">Keyboard</p>
+              </div>
+              <dl class="card-specs">
+                <div><dt>尺寸</dt><dd>310 × 76 × 12.6</dd></div>
+                <div><dt>部件</dt><dd>1</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="card reveal" data-model="mouse" tabindex="0" role="button" aria-label="查看鼠标模型">
+            <div class="card-media">
+              <img src="preview/mouse.jpg" alt="鼠标模型渲染图" loading="lazy" width="800" height="600">
+              <span class="card-index">06</span>
+              <span class="card-view">查看模型 <span aria-hidden="true">↗</span></span>
+            </div>
+            <div class="card-body">
+              <div>
+                <h3>鼠标</h3>
+                <p class="card-en">Mouse</p>
+              </div>
+              <dl class="card-specs">
+                <div><dt>尺寸</dt><dd>45 × 59.5 × 20</dd></div>
+                <div><dt>部件</dt><dd>1</dd></div>
+              </dl>
+            </div>
+          </article>
         </div>
+
+        <p class="works-note reveal">注：沙发、键盘、鼠标的源文件未附材质，预览中的织物 / 塑料材质为展示需要重新分配，源文件本身未改动。</p>
       </div>
     </section>
 
@@ -202,7 +249,7 @@
             <h2>先量尺寸，<br>再谈<em>光影。</em></h2>
             <p class="lede">
               建模不是堆细节，而是不断校准比例与关系。
-              下面这条流程，对应 <code>build.ms</code> 里真实执行的六个阶段。
+              下面六个阶段，对应 <code>build.ms</code> 与 <code>render_repo.ms</code> 里真实执行的流程。
             </p>
 
             <figure class="silhouette reveal">
@@ -214,7 +261,7 @@
             </figure>
 
             <ul class="process-meta">
-              <li><span>单位</span>Metric · Centimeters</li>
+              <li><span>单位</span>按各源文件</li>
               <li><span>渲染器</span>Default Scanline</li>
               <li><span>布光</span>Key / Fill / Top</li>
             </ul>
@@ -227,8 +274,8 @@
               <span class="step-num">01</span>
               <div>
                 <p class="step-tag">SETUP</p>
-                <h3>设定统一尺度</h3>
-                <p>重置场景，单位切到厘米，画幅固定 800 × 600，背景设为偏冷的浅灰蓝。所有模型共享同一套尺度与色彩基准，后续组合才不会失真。</p>
+                <h3>统一尺度与画幅</h3>
+                <p>打开源文件，先确认单位、画幅和背景。六个模型的单位并不完全一致，组合或对比前先按尺寸重新校准，避免“看起来差不多”的比例误差。</p>
               </div>
             </li>
             <li class="step reveal">
@@ -236,7 +283,7 @@
               <div>
                 <p class="step-tag">BLOCKOUT</p>
                 <h3>先用体块定比例</h3>
-                <p>衣柜从 120 × 60 × 192 cm 的柜体开始；显示器先落 26 cm 圆盘与 26 cm 颈柱；窗帘先砌 380 × 300 cm 的墙。先看大关系，再谈细节。</p>
+                <p>柜子从 120 × 60 × 192 的柜体开始；沙发先摆底座、三块坐垫与扶手；显示器是圆盘加颈柱；键盘和鼠标则从主网格的轮廓开始。</p>
               </div>
             </li>
             <li class="step reveal">
@@ -244,7 +291,7 @@
               <div>
                 <p class="step-tag">DETAIL</p>
                 <h3>补上轮廓与接缝</h3>
-                <p>门缝留 1 cm，把手用圆柱，顶板与踢脚各压出一圈层次；窗框、竖梃、玻璃依次嵌入；帘布转成 Editable Mesh，用正弦波做出 4.2 cm 的褶皱。</p>
+                <p>柜门留 1 厘米中缝，把手与门板线条单独建；沙发用倒角体块做软包；窗帘以正弦波压出 4.2 厘米褶皱；键盘的键帽与底座共用一张可编辑多边形。</p>
               </div>
             </li>
             <li class="step reveal">
@@ -252,7 +299,7 @@
               <div>
                 <p class="step-tag">MATERIAL</p>
                 <h3>用材质拉开层次</h3>
-                <p>StandardMaterial 控制漫反射、光泽度与高光。木色分柜体、柜门、踢脚、线条四层；显示器用深灰塑料配低饱和蓝屏；帘布是米色织物，玻璃保留高光泽。</p>
+                <p>标准材质控制漫反射、光泽度与高光。柜子是四层木色，沙发是暖灰织物配锈红抱枕，显示器是深灰塑料与低饱和蓝屏，键盘和鼠标用石墨色与浅灰塑料。</p>
               </div>
             </li>
             <li class="step reveal">
@@ -260,7 +307,7 @@
               <div>
                 <p class="step-tag">LIGHTING</p>
                 <h3>三点布光，一台相机</h3>
-                <p>暖色主光 0.85、冷色补光 0.30、顶部白光 0.22，全部使用 OmniLight。目标摄像机按物件高度单独构图，避免统一视角带来的呆板。</p>
+                <p>暖色主光 0.85、冷色补光 0.30、顶部白光 0.22，全部使用 OmniLight。相机按每件模型的外形单独构图，避免六张图共用同一个呆板视角。</p>
               </div>
             </li>
             <li class="step reveal">
@@ -268,7 +315,7 @@
               <div>
                 <p class="step-tag">RENDER</p>
                 <h3>渲染、剪影、归档</h3>
-                <p>每个场景先出正式渲染，再切纯黑剪影检查轮廓与遮挡，随后保存独立 .max。最后把三件模型合并进 all.max，输出组合镜头。</p>
+                <p>每件模型先出 800 × 600 正式渲染，再切纯黑剪影检查轮廓与遮挡，最后保留独立 <code>.max</code>。六件模型统一风格，但保留各自的构图。</p>
               </div>
             </li>
           </ol>
@@ -276,19 +323,19 @@
           <div class="stage-gallery reveal">
             <div class="stage-head">
               <p class="eyebrow">CLAY → MATERIAL</p>
-              <span>以双门衣柜为例 · 3 个阶段</span>
+              <span>以柜子为例 · 3 个阶段</span>
             </div>
             <div class="stage-grid">
               <figure>
-                <div class="stage-media"><img src="preview/process/wardrobe_01_block.png" alt="衣柜体块阶段的灰色模型渲染" loading="lazy" width="800" height="600"></div>
+                <div class="stage-media"><img src="preview/process/wardrobe_01_block.jpg" alt="柜子体块阶段的灰色模型渲染" loading="lazy" width="800" height="600"></div>
                 <figcaption><b>01</b> 体块 <span>Blockout</span></figcaption>
               </figure>
               <figure>
-                <div class="stage-media"><img src="preview/process/wardrobe_02_detail.png" alt="衣柜补齐门板与线条后的灰色模型渲染" loading="lazy" width="800" height="600"></div>
+                <div class="stage-media"><img src="preview/process/wardrobe_02_detail.jpg" alt="柜子补齐门板与线条后的灰色模型渲染" loading="lazy" width="800" height="600"></div>
                 <figcaption><b>02</b> 细节 <span>Detail</span></figcaption>
               </figure>
               <figure>
-                <div class="stage-media"><img src="preview/process/wardrobe_03_final.png" alt="衣柜完成材质与灯光后的最终渲染" loading="lazy" width="800" height="600"></div>
+                <div class="stage-media"><img src="preview/process/wardrobe_03_final.jpg" alt="柜子完成材质与灯光后的最终渲染" loading="lazy" width="800" height="600"></div>
                 <figcaption><b>03</b> 材质 <span>Material</span></figcaption>
               </figure>
             </div>
@@ -316,7 +363,7 @@ FillLight = OmniLight multiplier:0.30
 TopLight  = OmniLight multiplier:0.22
 
 <span class="c">-- 每个场景：渲染 → 存盘 → 剪影校验</span>
-render camera:SceneCam outputfile:"preview/all.png"
+render camera:SceneCam outputfile:"preview/all.jpg"
 saveMaxFile "all.max" quiet:true
 silhouetteRender cam "preview/sil_all.png"</code></pre>
             <div class="code-foot">
@@ -331,24 +378,24 @@ silhouetteRender cam "preview/sil_all.png"</code></pre>
     <!-- ============================== SCENE ============================== -->
     <section class="scene" id="scene">
       <figure class="scene-figure">
-        <img src="preview/all.png" alt="三件模型合并后的室内组合场景" loading="lazy" width="800" height="600">
+        <img src="preview/all.jpg" alt="柜子、显示器与窗帘合并后的室内组合场景" loading="lazy" width="800" height="600">
         <div class="scene-shade" aria-hidden="true"></div>
       </figure>
       <div class="wrap scene-inner">
         <div class="scene-copy reveal">
-          <p class="eyebrow">03 — THE COMPOSITE</p>
-          <h2>把三个物件，<br>放进<em>同一个镜头。</em></h2>
-          <p>独立模型解决“像不像”，组合场景解决“在不在一个空间里”。共用地面与灯光后，比例、朝向与遮挡关系才真正成立。</p>
+          <p class="eyebrow">03 — SPATIAL STUDY</p>
+          <h2>挑三件，<br>放进<em>同一个镜头。</em></h2>
+          <p>从六件模型里取出柜子、显示器与窗帘，共用地面、三点灯光与一台目标摄像机。独立模型解决“像不像”，组合场景解决“在不在一个空间里”。</p>
           <div class="scene-actions">
             <a class="btn btn--solid" href="models/all.max" download>下载 all.max <span aria-hidden="true">↓</span></a>
-            <a class="btn btn--ghost" href="models/3dsmax-models.zip" download>打包下载全部 <span aria-hidden="true">↓</span></a>
+            <a class="btn btn--ghost" href="models/3dsmax-models.zip" download>打包下载六件 <span aria-hidden="true">↓</span></a>
           </div>
         </div>
         <dl class="scene-stats reveal">
-          <div><dt>Scenes</dt><dd>04</dd></div>
+          <div><dt>Models</dt><dd>03</dd></div>
+          <div><dt>Parts</dt><dd>27</dd></div>
           <div><dt>Objects</dt><dd>45</dd></div>
           <div><dt>Lights</dt><dd>03</dd></div>
-          <div><dt>Camera</dt><dd>01</dd></div>
         </dl>
       </div>
     </section>
@@ -362,10 +409,10 @@ silhouetteRender cam "preview/sil_all.png"</code></pre>
         </div>
         <div class="about-copy reveal">
           <p>余家杰 · 学号 25120032013<br>韶关学院 · 教育科学学院</p>
-          <p class="muted">课程练习作品：以 3ds Max 参数化建模完成三件室内物件，并记录从体块、材质、布光到渲染校验的完整流程。网站使用纯 HTML / CSS / JavaScript 构建，可直接部署于 GitHub Pages。</p>
+          <p class="muted">课程练习作品：以 3ds Max 完成六件日常物件的建模与渲染，记录从体块、材质、布光到渲染校验的完整流程。网站使用纯 HTML / CSS / JavaScript 构建，可直接部署于 GitHub Pages。</p>
           <div class="about-links">
             <a href="scripts/build.ms" download>build.ms <span aria-hidden="true">↓</span></a>
-            <a href="scripts/process.ms" download>process.ms <span aria-hidden="true">↓</span></a>
+            <a href="scripts/render_repo.ms" download>render_repo.ms <span aria-hidden="true">↓</span></a>
             <a href="models/3dsmax-models.zip" download>全部模型 <span aria-hidden="true">↓</span></a>
             <a id="githubLinkFoot" href="https://github.com/" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
           </div>
@@ -380,7 +427,7 @@ silhouetteRender cam "preview/sil_all.png"</code></pre>
       <p class="mono">3DS MAX / 2026</p>
       <a href="#top" class="back-top">回到顶部 <span aria-hidden="true">↑</span></a>
     </div>
-    <div class="footer-word" aria-hidden="true">INTERIOR</div>
+    <div class="footer-word" aria-hidden="true">OBJECTS</div>
   </footer>
 
   <!-- ============================== MODAL ============================== -->
@@ -390,19 +437,19 @@ silhouetteRender cam "preview/sil_all.png"</code></pre>
       <button class="modal-close" type="button" data-close aria-label="关闭">✕</button>
 
       <div class="modal-media">
-        <img id="modalImg" src="preview/all.png" alt="">
+        <img id="modalImg" src="preview/wardrobe.jpg" alt="">
         <div class="view-toggle" role="group" aria-label="视图切换">
           <button type="button" class="is-active" data-view="render">渲染</button>
           <button type="button" data-view="sil">剪影</button>
         </div>
-        <span class="modal-count" id="modalCount">00 / 04</span>
-        <span class="modal-file" id="modalFile">all.max</span>
+        <span class="modal-count" id="modalCount">01 / 06</span>
+        <span class="modal-file" id="modalFile">cabinet.max</span>
       </div>
 
       <aside class="modal-info">
-        <p class="eyebrow" id="modalEyebrow">SCENE</p>
-        <h3 id="modalTitle">室内一角</h3>
-        <p class="modal-en" id="modalEn">All Scenes</p>
+        <p class="eyebrow" id="modalEyebrow">MODEL 01 — CABINET</p>
+        <h3 id="modalTitle">柜子</h3>
+        <p class="modal-en" id="modalEn">Cabinet</p>
         <p class="modal-desc" id="modalDesc"></p>
 
         <dl class="modal-specs" id="modalSpecs"></dl>
@@ -413,7 +460,7 @@ silhouetteRender cam "preview/sil_all.png"</code></pre>
         </div>
 
         <div class="modal-actions">
-          <a class="btn btn--solid" id="modalDownload" href="models/all.max" download>下载 .max <span aria-hidden="true">↓</span></a>
+          <a class="btn btn--solid" id="modalDownload" href="models/cabinet.max" download>下载 .max <span aria-hidden="true">↓</span></a>
           <button class="btn btn--ghost" type="button" id="modalSil">看剪影</button>
         </div>
 
