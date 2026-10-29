@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e0c0a">
+  <title>更新日志 · 余家杰作品档案</title>
+  <meta name="description" content="余家杰的数字媒体作品更新日志：3D 建模、视频剪辑、平面设计与后续软件练习，按时间记录每一次改动。">
+  <meta name="author" content="余家杰">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230e0c0a'/%3E%3Cpath d='M16 20h32M32 20v26' stroke='%23d8b26a' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="journal.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <header class="nav nav--sub" id="nav">
+    <a class="brand" href="index.html" aria-label="回到首页">
+      <span class="brand-mark">YJ</span>
+      <span class="brand-text">余家杰<small>Digital Media Archive</small></span>
+    </a>
+    <nav class="nav-links" aria-label="主导航">
+      <a href="index.html">首页</a>
+      <a href="index.html#works">模型</a>
+      <a href="index.html#process">过程</a>
+      <a href="journal.html" aria-current="page">日志</a>
+    </nav>
+    <a class="nav-cta" id="githubLink" href="https://github.com/" target="_blank" rel="noopener">
+      GitHub <span aria-hidden="true">↗</span>
+    </a>
+  </header>
+
+  <main class="journal-page">
+    <section class="journal-hero">
+      <div class="journal-glow" aria-hidden="true"></div>
+      <div class="wrap">
+        <p class="eyebrow">ARCHIVE · LIVING LOG</p>
+        <h1 class="journal-title">更新日志<span class="title-dot">.</span></h1>
+        <p class="journal-lede">
+          这是一个会继续长大的档案。每次新建模、每次剪辑、每个新软件的第一张图，
+          都会在这里留下一条带日期的记录。左侧是时间，右侧是这一次具体改了什么。
+        </p>
+
+        <dl class="journal-stats">
+          <div><dt>条目</dt><dd id="statEntries">—</dd></div>
+          <div><dt>分类</dt><dd id="statCats">—</dd></div>
+          <div><dt>最近更新</dt><dd id="statUpdated">—</dd></div>
+          <div><dt>年级</dt><dd>2025<small>级</small></dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="journal-body">
+      <div class="wrap">
+        <div class="journal-toolbar reveal">
+          <div class="filter-chips" id="filterChips" role="group" aria-label="按分类筛选日志"></div>
+          <p class="journal-count" id="journalCount" aria-live="polite"></p>
+        </div>
+
+        <ol class="timeline" id="timeline"></ol>
+        <p class="journal-empty" id="journalEmpty" hidden>这个分类下还没有记录，先把下一件作品做完。</p>
+        <noscript>
+          <p class="journal-empty">日志由 <code>data/archive.js</code> 渲染，请开启 JavaScript 查看。</p>
+        </noscript>
+      </div>
+    </section>
+
+    <section class="journal-next">
+      <div class="wrap">
+        <div class="next-head reveal">
+          <p class="eyebrow">NEXT — 待续</p>
+          <h2>接下来会长出<em>什么</em></h2>
+          <p class="lede">分类不是为了把内容分开，而是为了让下一次更新有地方可放。</p>
+        </div>
+        <div class="next-grid" id="roadmap"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <p>ARCHIVED &amp; UPDATED BY <strong>余家杰</strong></p>
+      <p class="mono">DIGITAL MEDIA / 2025</p>
+      <a href="index.html" class="back-top">回到首页 <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="footer-word" aria-hidden="true">JOURNAL</div>
+  </footer>
+
+  <script src="data/archive.js"></script>
+  <script src="journal.js"></script>
+</body>
+</html>

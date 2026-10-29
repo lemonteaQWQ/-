@@ -34,7 +34,7 @@
       desc:
         "由 12 个倒角体块拼成：底座、三块坐垫、靠背、两只扶手、靠背垫与抱枕。源文件没有材质，预览按暖灰织物、深色扶手与锈红 / 橄榄抱枕重新分配。",
       specs: [
-        ["外形尺寸", "343.6 × 58.5 × 70"],
+        ["外形尺寸", "180 × 36.6 × 47.8"],
         ["建模部件", "12 个"],
         ["材质", "6 种"],
         ["场景对象", "12 个"],
@@ -121,6 +121,59 @@
   };
 
   const ORDER = ["cabinet", "sofa", "monitor", "curtain", "keyboard", "mouse"];
+
+  /* ------------------------------ journal teaser ------------------------------ */
+  function escapeHtml(value) {
+    return String(value == null ? "" : value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
+  (function renderJournalPreview() {
+    const list = document.getElementById("journalPreview");
+    const archive = window.ARCHIVE;
+    if (!list || !archive) return;
+
+    const catMap = {};
+    (archive.categories || []).forEach(function (cat) { catMap[cat.id] = cat.label; });
+
+    const entries = (archive.entries || [])
+      .map(function (entry, index) { return Object.assign({ _order: index }, entry); })
+      .sort(function (a, b) {
+        if (a.date === b.date) return a._order - b._order;
+        return a.date < b.date ? 1 : -1;
+      })
+      .slice(0, 3);
+
+    list.innerHTML = entries
+      .map(function (entry) {
+        const date = String(entry.date || "").replace(/-/g, ".");
+        const link = entry.link
+          ? '<a class="teaser-link" href="' + escapeHtml(entry.link) + '">' +
+            escapeHtml(entry.linkLabel || "查看记录") + ' <span aria-hidden="true">→</span></a>'
+          : '<span class="teaser-link teaser-link--static">已归档</span>';
+
+        return (
+          '<li class="teaser-item reveal is-in">' +
+            '<div class="teaser-meta">' +
+              '<time class="teaser-date" datetime="' + escapeHtml(entry.date) + '">' + escapeHtml(date) + '</time>' +
+              '<span class="teaser-cat" data-cat="' + escapeHtml(entry.cat) + '">' +
+                escapeHtml(catMap[entry.cat] || entry.cat) + '</span>' +
+            '</div>' +
+            '<h3>' + escapeHtml(entry.title) + '</h3>' +
+            '<p>' + escapeHtml(entry.summary) + '</p>' +
+            link +
+          '</li>'
+        );
+      })
+      .join("");
+
+    const updated = document.getElementById("journalUpdated");
+    if (updated && archive.updated) updated.textContent = String(archive.updated).replace(/-/g, ".");
+  })();
 
   /* ------------------------------ refs ------------------------------ */
   const modal = document.getElementById("modal");
@@ -308,6 +361,13 @@
       }
     }
   });
+
+  /* ------------------------------ deep link ?model=sofa ------------------------------ */
+  (function openFromQuery() {
+    const key = new URLSearchParams(window.location.search).get("model");
+    if (!key || !MODELS[key]) return;
+    window.setTimeout(function () { openModal(key, null); }, 160);
+  })();
 
   /* ------------------------------ scroll UI ------------------------------ */
   const progressBar = document.getElementById("progressBar");

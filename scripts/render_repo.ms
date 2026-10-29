@@ -24,27 +24,9 @@ fn matDiffuse nm col gloss spec =
 
 fn worldBBox o =
 (
-	local mn = o.min
-	local mx = o.max
-	local bbmin = [1e9,1e9,1e9]
-	local bbmax = [-1e9,-1e9,-1e9]
-	for xi in #(mn.x, mx.x) do
-	(
-		for yi in #(mn.y, mx.y) do
-		(
-			for zi in #(mn.z, mx.z) do
-			(
-				local p = [xi,yi,zi] * o.transform
-				if p.x < bbmin.x do bbmin.x = p.x
-				if p.y < bbmin.y do bbmin.y = p.y
-				if p.z < bbmin.z do bbmin.z = p.z
-				if p.x > bbmax.x do bbmax.x = p.x
-				if p.y > bbmax.y do bbmax.y = p.y
-				if p.z > bbmax.z do bbmax.z = p.z
-			)
-		)
-	)
-	#(bbmin, bbmax)
+	/* node.min / node.max are already world-space bounds.
+	   Do NOT multiply by o.transform again, or the bbox doubles. */
+	#(o.min, o.max)
 )
 
 fn sceneBBox =
@@ -220,7 +202,7 @@ if (loadBySize 745472) != undefined then
 		else o.material = seatM
 	)
 	centerOnGround()
-	local cam = setupStudio 0.5
+	local cam = setupStudio 1.0
 	shot cam (outDir + "sofa.png")
 	silhouette cam (outDir + "sil_sofa.png")
 )
